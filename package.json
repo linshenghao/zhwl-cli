@@ -1,6 +1,6 @@
 {
   "name": "zhwl-cli",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "a cli for zhwl",
   "main": "index.js",
   "bin": {
