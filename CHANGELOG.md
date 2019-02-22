@@ -5,19 +5,19 @@
 #0.0.5
 新增 -t 选项，新增对gitlab的支持
 ```shell
-hwxyz init <project name> -t gitlab -r <gitlab address>
+zhwl init <project name> -t gitlab -r <gitlab address>
 #0.0.6
 新增自动执行npm install功能
 
 #0.0.9
 新增更新功能:
-项目初始化时新增hwxyz.json文件
-执行`hwxyz update`时，通过模板版本进行替换工作
+项目初始化时新增zhwl.json文件
+执行`zhwl update`时，通过模板版本进行替换工作
 ```json
 {
-    // 由hwxyz生成
+    // 由zhwl生成
     "repository": {
-        "address": "http://gitlab.mygitlab.com:username/testhwxyzcli#master",
+        "address": "http://gitlab.mygitlab.com:username/zhwl-xxxx#master",
         "type": "gitlab"
     },
     // 每次替换的模板文件夹，lib下一般存放公共文件

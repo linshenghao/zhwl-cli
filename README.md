@@ -1,4 +1,4 @@
-# hwxyz
+# zhwl
 a cli for zhwl
 
 ## Develop
