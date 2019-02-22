@@ -21,7 +21,7 @@ const logSymbols = require('log-symbols')
 
 program.usage('<project-name>')
     .option('-t, --type [repository-type]', 'assign to repository type', 'github')
-    .option('-r, --repository [repository]', 'assign to repository', 'direct:https://github.com/linshenghao/zhwl-cli')
+    .option('-r, --repository [repository]', 'assign to repository', 'huomarvin/hwxyz-test')
     .parse(process.argv);
 
 // console.log('repository - type', program.type);
@@ -38,7 +38,7 @@ if (!projectName) {  // project-name 必填
 const list = glob.sync('*')  // 遍历当前目录
 const rootName = path.basename(process.cwd()) // 获取执行当前命令的文件夹名称字符串
 
-let next = undefined;
+let next = undefined
 if (list.length) {  // 如果当前目录不为空
     if (list.filter(name => {
             const fileName = path.resolve(process.cwd(), path.join('.', name))
@@ -71,7 +71,6 @@ function go() {
         if (projectRoot !== '.') {
             fs.mkdirSync(projectRoot)
         }
-        console.log("仓库",program.repository)
         return download(projectRoot, program.type, program.repository).then(target => {
             return {
                 name: projectRoot,
@@ -119,7 +118,7 @@ function go() {
                 repository: "replace"
             }
         };
-        fs.writeFileSync(`${projectPath}/zhwl.json`, JSON.stringify(hwxyzJson, null, 4));
+        fs.writeFileSync(`${projectPath}/hwxyz.json`, JSON.stringify(hwxyzJson, null, 4));
         let local_package = JSON.parse(fs.readFileSync(`${projectPath}/package.json`).toString());
         local_package.templateVersion = res.templateVersion || '0.0.1';
         fs.writeFileSync(`${projectPath}/package.json`, JSON.stringify(local_package, null, 4));
@@ -127,7 +126,7 @@ function go() {
         console.log(logSymbols.success, chalk.green('创建成功:)'))
         try {
             process.chdir(projectName);
-            const proc = spawn.sync('cnpm', ['install'], { stdio: 'inherit' });
+            const proc = spawn.sync('npm', ['install'], { stdio: 'inherit' });
             if (proc.status === 0) {
                 // console.log('执行成功');
                 console.log(`Success! Created ${projectName} at ${process.cwd()}`);
@@ -142,7 +141,7 @@ function go() {
                 console.log('    Bundles the app into static files for production.');
             }
         } catch (err) {
-            console.error(`chdir: ${err}`);
+            // console.error(`chdir: ${err}`);
         }
     }).catch(err => {
         // 失败了用红色，增强提示
