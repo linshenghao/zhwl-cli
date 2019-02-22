@@ -1,10 +1,10 @@
 {
-  "name": "zhwl_cli",
-  "version": "1.0.0",
+  "name": "zhwl-cli",
+  "version": "1.0.1",
   "description": "a cli for zhwl",
   "main": "index.js",
   "bin": {
-    "zhwl_shell": "./bin/macaw.js"
+    "zhwl": "./bin/zhwl.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/linshenghao/zhwl-cli",
   "devDependencies": {},
-  "author": "zhwl",
+  "author": "linshenghao",
   "license": "ISC",
   "dependencies": {
     "chalk": "^2.4.1",

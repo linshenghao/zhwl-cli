@@ -21,7 +21,7 @@ const logSymbols = require('log-symbols')
 
 program.usage('<project-name>')
     .option('-t, --type [repository-type]', 'assign to repository type', 'github')
-    .option('-r, --repository [repository]', 'assign to repository', 'direct:https://github.com/linshenghao/zhwl-cli')
+    .option('-r, --repository [repository]', 'assign to repository', 'direct:https://github.com/linshenghao/zhwl-base-template')
     .parse(process.argv);
 
 // console.log('repository - type', program.type);
