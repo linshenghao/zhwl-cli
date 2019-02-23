@@ -93,6 +93,10 @@ function go() {
                 name: 'projectDescription',
                 message: '项目的简介',
                 default: `A project named ${context.name}`
+            },{
+                name: 'projectAuthor',
+                message: '项目的作者',
+                default: `zhwl`
             }
         ]).then(answers => {
             return {
