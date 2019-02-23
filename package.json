@@ -1,6 +1,6 @@
 {
   "name": "zhwl-cli",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "a cli for zhwl",
   "main": "index.js",
   "bin": {
@@ -10,7 +10,9 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "zhwl-cli","zhwl","cli"
+    "zhwl-cli",
+    "zhwl",
+    "cli"
   ],
   "repository": {
     "type": "git",
@@ -18,7 +20,7 @@
   },
   "bugs": {
     "url": "https://github.com/linshenghao/zhwl-cli/issues",
-    "email" : "1148780544@qq.com"
+    "email": "1148780544@qq.com"
   },
   "homepage": "https://github.com/linshenghao/zhwl-cli",
   "devDependencies": {},
